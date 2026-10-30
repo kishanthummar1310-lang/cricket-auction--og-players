@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cricstrike – Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Archivo+Black&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css"></head><body>
+<header class="top"><h3>Cricstrike console</h3><a href="/viewer" target="_blank" rel="noopener">Open viewer</a></header>
+<main class="wrap"><div class="col">
+<section class="card" id="live"></section>
+<section class="card"><h3>Players</h3>
+<form id="pf"><input name="n" placeholder="Player name" required><select name="r">
+<option>Batter</option><option>Bowler</option><option>All-rounder</option><option>Wicketkeeper</option></select>
+<input name="b" type="number" min="5" step="5" value="20" aria-label="Base price in lakh" required><button class="btn p">Add player</button></form>
+<div class="list" id="players"></div></section></div>
+<aside class="col"><section class="card"><h3>Teams</h3>
+<form id="tf"><input name="n" placeholder="Team name" required><input name="c" type="color" value="#2457A6" aria-label="Team colour">
+<input name="p" type="number" min="100" step="50" value="1000" aria-label="Purse in lakh" required><button class="btn p">Add team</button></form>
+<div id="teams"></div></section>
+<section class="card"><h3>Data</h3><div class="row" style="flex-wrap:wrap;justify-content:flex-start">
+<button class="btn" data-a="export">Export</button><label class="btn">Import<input id="imp" type="file" accept=".json" hidden></label>
+<button class="btn d" data-a="demo">Reset to demo</button><button class="btn d" data-a="clear">Clear all</button></div>
+<p class="mut" style="margin-top:10px">Amounts are in lakh. 100 L = 1 Cr.</p></section></aside></main>
+<script src="/js/store.js"></script><script src="/js/admin.js"></script></body></html>
